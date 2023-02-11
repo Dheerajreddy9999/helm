@@ -1,0 +1,6 @@
+image:
+  repository: coitlearning/coit-backend1
+  tag: 1.0.0
+
+replicaCount: 4
+

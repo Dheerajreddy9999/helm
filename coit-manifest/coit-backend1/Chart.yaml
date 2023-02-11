@@ -1,0 +1,6 @@
+apiVersion: v2
+name: coit-backend1
+version: 1.0.0
+dependencies:
+  - name: coit-backend2
+    version: 1.0.0

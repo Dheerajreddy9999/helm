@@ -1,0 +1,9 @@
+image:
+  repository: coitlearning/coit-backend1
+  tag: latest
+
+replicaCount: 1
+
+service:
+  type: ClusterIP
+

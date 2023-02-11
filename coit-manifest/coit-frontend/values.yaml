@@ -1,0 +1,11 @@
+image:
+  repository: coitlearning/coit-frontend
+  tag: v1
+
+replicaCount: 2
+name: coit-frontend
+
+service:
+  port: 80
+  targetPort: 80
+  type: LoadBalancer

@@ -1,0 +1,11 @@
+image:
+  repository: coitlearning/coit-backend2
+  tag: v1
+
+replicaCount: 2
+name: coit-backend2
+
+service:
+  port: 5000
+  targetPort: 5000
+  type: ClusterIP
