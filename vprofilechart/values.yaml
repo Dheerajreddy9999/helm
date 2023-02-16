@@ -7,7 +7,7 @@ vproapp:
   containerport: 8080
   portName: vproapp-port
   service:
-    port: 80
+    port: 8080
     type: ClusterIP
 
 
