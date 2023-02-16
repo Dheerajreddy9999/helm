@@ -8,7 +8,7 @@ vproapp:
   portName: vproapp-port
   service:
     port: 80
-    type: LoadBalancer
+    type: ClusterIP
 
 
 # Default values for memcache
