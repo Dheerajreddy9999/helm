@@ -22,11 +22,11 @@ spec:
         - containerPort: 8080
           name: jenkins-port
         volumeMounts:
-        - name: jenkins_home
+        - name: jn-data
           mountPath: /var/jenkins_home
   volumeClaimTemplates:
   - metadata:
-      name: jenkins_home
+      name: jn-data
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
