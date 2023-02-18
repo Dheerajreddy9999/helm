@@ -1,4 +1,5 @@
 cloudbees-folder
+kubernetes
 javax-activation-api
 javax-mail-api
 bouncycastle-api
