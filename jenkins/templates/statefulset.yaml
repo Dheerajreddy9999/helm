@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts-jdk11
+        image: dheerajlearningdocker/jenkins
         ports:
         - containerPort: 8080
           name: jenkins-port
