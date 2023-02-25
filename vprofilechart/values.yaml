@@ -7,8 +7,12 @@ vproapp:
   containerport: 8080
   portName: vproapp-port
   service:
-    port: 8080
+    port: 80
     type: ClusterIP
+
+# Enable or Disable ingress
+ingress:
+  enabled: true
 
 
 # Default values for memcache
