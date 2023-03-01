@@ -1,8 +1,4 @@
 cloudbees-folder
-Pipeline Utility Steps
-CloudBees Docker Build and Publish
-Docker Pipeline
-docker-build-step
 kubernetes
 javax-activation-api
 javax-mail-api
