@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: jenkins
   serviceName: jenkins
   replicas: 1
   template:
