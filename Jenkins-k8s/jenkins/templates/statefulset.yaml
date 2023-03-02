@@ -13,6 +13,9 @@ spec:
       labels:
         app: jenkins
     spec:
+      securityContext:
+            fsGroup: 1000 
+            runAsUser: 1000
       serviceAccountName: jenkins
       terminationGracePeriodSeconds: 10
       containers:
@@ -24,11 +27,11 @@ spec:
         - containerPort: 50000
           name: jnlp
         volumeMounts:
-        - name: jekins_home
+        - name: jekins-home
           mountPath: /var/jenkins_home 
   volumeClaimTemplates:
   - metadata:
-      name: jekins_home
+      name: jekins-home
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
