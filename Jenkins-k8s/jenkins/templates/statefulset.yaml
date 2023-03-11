@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: jenkins
-  serviceName: jenkins
+  serviceName: jenkins-ui
   replicas: 1
   template:
     metadata:
@@ -21,21 +21,23 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: jenkins
-        image: dheerajlearningdocker/jenkins:v2
+        image: jenkins/jenkins:lts-jdk11
         ports:
         - containerPort: 8080
           name: http
         - containerPort: 50000
           name: jnlp
         volumeMounts:
-        - name: jekins-home
+        - name: jenkins-home
           mountPath: /var/jenkins_home 
   volumeClaimTemplates:
   - metadata:
-      name: jekins-home
+      name: jenkins-home
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
           storage: 8Gi
+
+
 
