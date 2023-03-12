@@ -1,4 +1,4 @@
 controller:
   namespace: default
-  jenkins-admin-user: admin
-  jenkins-admin-pass: admin
+  jenkins_admin_user: admin
+  jenkins_admin_pass: admin
