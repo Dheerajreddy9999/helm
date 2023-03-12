@@ -22,19 +22,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: jenkins
-        image: jenkins/jenkins:lts-jdk11
-        env:
-          - name: JENKINS_USERNAME
-            valueFrom:
-              secretKeyRef:
-                name: jenkins-creds
-                key: jenkins-admin-user
-        env:
-          - name: JENKINS_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: jenkins-creds
-                key: jenkins-admin-pass
+        image: dheerajlearningdocker/jenkins:v1.1
         ports:
         - containerPort: 8080
           name: http
