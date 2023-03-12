@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: jenkins
-  namespace: jenkins
+  namespace: {{ .Values.controller.namespace }}
 spec:
   selector:
     matchLabels:
@@ -17,6 +17,7 @@ spec:
       securityContext:
             fsGroup: 1000 
             runAsUser: 1000
+            runAsNonRoot: true
       serviceAccountName: jenkins
       terminationGracePeriodSeconds: 10
       containers:
@@ -29,7 +30,7 @@ spec:
           name: jnlp
         volumeMounts:
         - name: jenkins-home
-          mountPath: /var/jenkins_home 
+          mountPath: /var/jenkins_home
   volumeClaimTemplates:
   - metadata:
       name: jenkins-home
