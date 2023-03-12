@@ -1,7 +1,7 @@
 FROM jenkins/jenkins:lts-alpine-jdk11
 
-ENV JENKINS_USER 
-ENV JENKINS_PASS 
+ARG JENKINS_USER 
+ARG JENKINS_PASS 
 
 # Skip initial setup
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
